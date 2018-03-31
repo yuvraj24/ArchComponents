@@ -7,6 +7,9 @@ import android.arch.lifecycle.OnLifecycleEvent
 import android.os.Bundle
 import com.arch.components.R
 
+/**
+ * Created by Yuvraj.
+ */
 class LifecycleActivity : BaseActivity(), LifecycleObserver {
 
     /*

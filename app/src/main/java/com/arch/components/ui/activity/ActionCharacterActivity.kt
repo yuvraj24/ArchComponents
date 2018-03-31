@@ -12,7 +12,9 @@ import com.arch.components.ui.adapter.CharacterAdapter
 import com.arch.components.utils.AppUtils
 import kotlinx.android.synthetic.main.activity_action_character.*
 
-
+/**
+ * Created by Yuvraj.
+ */
 class ActionCharacterActivity : BaseActivity() {
 
     private lateinit var viewModel: CharacterViewModel;

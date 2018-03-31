@@ -10,7 +10,7 @@ import com.arch.components.listener.onClickCallback
 import kotlinx.android.synthetic.main.holder_characters.view.*
 
 /**
- * Created by Yuvraj on 27/03/18.
+ * Created by Yuvraj
  */
 class ConceptAdapter(private var context: Activity, objects: List<String>, private var callback: onClickCallback) : RecyclerView.Adapter<ConceptAdapter.ViewHolder>() {
 

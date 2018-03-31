@@ -8,6 +8,9 @@ import com.arch.components.ui.adapter.ConceptAdapter
 import kotlinx.android.synthetic.main.activity_concept.*
 import org.jetbrains.anko.intentFor
 
+/**
+ * Created by Yuvraj.
+ */
 class ConceptActivity : BaseActivity(), onClickCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {

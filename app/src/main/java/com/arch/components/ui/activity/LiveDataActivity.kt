@@ -11,6 +11,9 @@ import com.zplesac.connectionbuddy.models.ConnectivityType
 import kotlinx.android.synthetic.main.activity_live_data.*
 import org.jetbrains.anko.imageResource
 
+/**
+ * Created by Yuvraj.
+ */
 class LiveDataActivity : BaseActivity(), LifecycleObserver {
 
     private lateinit var connectionLiveData: ConnectionLiveData;

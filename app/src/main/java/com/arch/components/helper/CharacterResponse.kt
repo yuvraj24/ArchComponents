@@ -1,5 +1,8 @@
 package com.arch.components.helper
 
+/**
+ * Created by Yuvraj on 27/03/18.
+ */
 data class CharacterResponse(
         val copyright: String? = null,
         val code: String? = null,

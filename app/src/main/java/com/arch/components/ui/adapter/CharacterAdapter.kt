@@ -9,7 +9,7 @@ import com.arch.components.helper.CharacterResponse
 import kotlinx.android.synthetic.main.holder_characters.view.*
 
 /**
- * Created by Yuvraj on 27/03/18.
+ * Created by Yuvraj
  */
 class CharacterAdapter(mContext: Activity, objects: List<CharacterResponse.ResultsItem>) : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
