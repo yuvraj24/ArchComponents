@@ -6,14 +6,14 @@ import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
 import com.arch.components.R
+import com.arch.components.listener.onClickCallback
 import kotlinx.android.synthetic.main.holder_characters.view.*
 
 /**
  * Created by Yuvraj on 27/03/18.
  */
-class ConceptAdapter(mContext: Activity, objects: List<String>) : RecyclerView.Adapter<ConceptAdapter.ViewHolder>() {
+class ConceptAdapter(private var context: Activity, objects: List<String>, private var callback: onClickCallback) : RecyclerView.Adapter<ConceptAdapter.ViewHolder>() {
 
-    private var context: Activity = mContext
     private var listCharacters: List<String> = objects
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ConceptAdapter.ViewHolder {
@@ -33,7 +33,7 @@ class ConceptAdapter(mContext: Activity, objects: List<String>) : RecyclerView.A
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         init {
             view.setOnClickListener {
-
+                callback.onClick(adapterPosition)
             }
         }
     }
