@@ -4,6 +4,7 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import com.arch.components.R
 import com.arch.components.architecture.viewmodels.CharacterViewModel
 import com.arch.components.helper.CharacterResponse
@@ -22,7 +23,6 @@ class ActionCharacterActivity : BaseActivity() {
 
         setUpRecyclerView();
         initViewModel()
-
     }
 
     private fun setUpRecyclerView() {
@@ -35,7 +35,7 @@ class ActionCharacterActivity : BaseActivity() {
         viewModel.getActionCharacters()
                 .observe(this, Observer<CharacterResponse>() {
                     AppUtils.logMe("ActionCharacterActivity", "onChanged")
-
+                    progressBar.visibility = View.GONE
                     if (it?.data?.results?.size != 0) {
                         recycler_characters.adapter = CharacterAdapter(this, it!!.data.results)
                     }

@@ -14,7 +14,7 @@ class ConceptActivity : BaseActivity(), onClickCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_concept)
 
-        var concepts: List<String> = listOf("General Example", "ViewModel", "LifeCycle", "LiveData", "Room")
+        var concepts: List<String> = listOf("General Example", "ViewModel", "LifeCycle", "LiveData")
         var adapter: ConceptAdapter = ConceptAdapter(this, concepts, this)
 
         recylcer_concepts.layoutManager = LinearLayoutManager(this)
@@ -24,11 +24,9 @@ class ConceptActivity : BaseActivity(), onClickCallback {
     override fun onClick(position: Int) {
         when (position) {
             0 -> startActivity(intentFor<ActionCharacterActivity>())
-            1 -> startActivity(intentFor<ActionCharacterActivity>())
+            1 -> startActivity(intentFor<ViewModelActivity>())
             2 -> startActivity(intentFor<LifecycleActivity>())
-            3 -> startActivity(intentFor<LifecycleActivity>())
-            4 -> startActivity(intentFor<LifecycleActivity>())
-
+            3 -> startActivity(intentFor<LiveDataActivity>())
         }
     }
 }

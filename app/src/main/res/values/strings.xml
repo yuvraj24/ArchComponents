@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ArchComponents</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="lifecycle">Lifecycle</string>
+    <string name="livedata">LiveData</string>
+    <string name="viewmodel">ViewModel</string>
+    <string name="marvel">Marvel Characters</string>
+
+
 </resources>

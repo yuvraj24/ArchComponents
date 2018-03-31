@@ -3,32 +3,39 @@
     package="com.arch.components">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".ui.activity.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.ActionCharacterActivity">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity android:name=".ui.activity.BaseActivity" />
-        <activity android:name=".ui.activity.ConceptActivity">
+        <activity android:name=".ui.activity.ActionCharacterActivity"
+            android:label="@string/marvel"/>
+        <activity
+            android:name=".ui.activity.BaseActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.activity.ConceptActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.LifecycleActivity"></activity>
+        <activity
+            android:name=".ui.activity.LifecycleActivity"
+            android:label="@string/lifecycle" />
+        <activity
+            android:name=".ui.activity.LiveDataActivity"
+            android:label="@string/livedata" />
+        <activity
+            android:name=".ui.activity.ViewModelActivity"
+            android:label="@string/viewmodel" />
     </application>
 
 </manifest>
