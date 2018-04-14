@@ -1,5 +1,6 @@
 package com.arch.components.ui.activity
 
+import android.annotation.SuppressLint
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.Observer
@@ -31,6 +32,7 @@ class LiveDataActivity : BaseActivity(), LifecycleObserver {
         initLiveData(savedInstanceState);
     }
 
+    @SuppressLint("SetTextI18n")
     private fun initLiveData(savedInstanceState: Bundle?) {
         connectionLiveData = ConnectionLiveData()
         val liveData = connectionLiveData.init(savedInstanceState != null)

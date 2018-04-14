@@ -3,7 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.arch.components.ui.activity.LiveDataActivity">
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/textsize20"
+        android:layout_margin="@dimen/margin_15"
+        android:text="@string/connectivity_status"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +25,9 @@
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/image_internet_status"
             android:layout_width="@dimen/margin100"
-            android:layout_height="@dimen/margin100" />
+            app:tint="@color/colorPrimary"
+            android:layout_height="@dimen/margin100"
+            android:src="@drawable/ic_no_internet"/>
 
         <TextView
             android:id="@+id/text_internet_status"

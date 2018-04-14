@@ -6,6 +6,14 @@
     <string name="livedata">LiveData</string>
     <string name="viewmodel">ViewModel</string>
     <string name="marvel">Marvel Characters</string>
+    <string name="connectivity_status">Dynamically detects and changes the Internet connectivity status.</string>
+    <string name="displays_the_same">Detects the Lifecycle of the Activity and displays the same.</string>
+    <string name="on_create">Activity ON_CREATE is invoked</string>
+    <string name="on_start">Activity ON_START is invoked</string>
+    <string name="on_resume">Activity ON_RESUME is invoked</string>
+    <string name="on_pause">Activity ON_PAUSE is invoked</string>
+    <string name="on_stop">Activity ON_STOP is invoked</string>
+    <string name="on_destroy">Activity ON_DESTROY is invoked</string>
 
 
 </resources>

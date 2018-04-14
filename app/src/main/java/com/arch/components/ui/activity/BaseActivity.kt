@@ -10,11 +10,14 @@ import android.widget.Toast
  */
 open class BaseActivity : AppCompatActivity(), LifecycleObserver {
 
+    private var toast: Toast? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
-    fun showToast(message : String){
-        Toast.makeText(this, message,Toast.LENGTH_SHORT).show()
+    fun showToast(message: String) {
+        toast?.cancel()
+        toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+        toast?.show()
     }
 }

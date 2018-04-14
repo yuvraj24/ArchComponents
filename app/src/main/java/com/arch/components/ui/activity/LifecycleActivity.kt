@@ -6,6 +6,7 @@ import android.arch.lifecycle.LifecycleRegistry
 import android.arch.lifecycle.OnLifecycleEvent
 import android.os.Bundle
 import com.arch.components.R
+import kotlinx.android.synthetic.main.activity_lifecycle.*
 
 /**
  * Created by Yuvraj.
@@ -38,31 +39,37 @@ class LifecycleActivity : BaseActivity(), LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun viewCreate() {
-        showToast("ON_CREATE")
+        showToast(getString(R.string.on_create))
+        text_status.text = getString(R.string.on_create)
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun viewStart() {
-        showToast("ON_START")
+        showToast(getString(R.string.on_start))
+        text_status.text = getString(R.string.on_start)
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun viewResume() {
-        showToast("ON_RESUME")
+        showToast(getString(R.string.on_resume))
+        text_status.text = getString(R.string.on_resume)
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun viewPause() {
-        showToast("ON_PAUSE")
+        showToast(getString(R.string.on_pause))
+        text_status.text = getString(R.string.on_pause)
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun viewStop() {
-        showToast("ON_STOP")
+        showToast(getString(R.string.on_stop))
+        text_status.text = getString(R.string.on_stop)
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun viewDestroy() {
-        showToast("ON_DESTROY")
+        showToast(getString(R.string.on_destroy))
+        text_status.text = getString(R.string.on_destroy)
     }
 }
