@@ -1,5 +1,7 @@
 # Android Architecture Components
 
+<img src='https://erikcaffrey.github.io/content/images/2017/5/kotlin-arch.png'/>
+
 Check out the Demo app from the Play Store link below.
 
 <a href='https://play.google.com/store/apps/details?id=com.arch.components'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="80px"/></a>
@@ -8,7 +10,12 @@ A typical Android app is constructed out of multiple app components, including a
 
 Keep in mind that mobile devices are resource constrained, so at any time, the operating system may need to kill some apps to make room for new ones. The point of all this is that your app components can be launched individually and out-of-order, and can be destroyed at anytime by the user or the system. Because app components are ephemeral and their lifecycle (when they are created and destroyed) are not under your control, you should not store any app data or state in your app components and your app components should not depend on each other.
 
-Room
+The new architecture has following components that make it easy. They are also designed to fit together as building blocks.
+
+<img src='https://cdn-images-1.medium.com/max/1600/1*KnYBBZIDDeg4zVDDEcLw2A.png'/>
+
+# Room
+
 In new approach, lets tackle the database using Room which a new SQLite object mapping library. To setup a table in room you can define a Plain Old Java Object with annotation @Entity and @PrimaryKey.
 
 ```html
