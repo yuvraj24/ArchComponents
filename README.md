@@ -1,8 +1,40 @@
-# ArchComponents
+# Android Architecture Components
 
 Check out the Demo app from the Play Store link below.
 
 <a href='https://play.google.com/store/apps/details?id=com.arch.components'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="80px"/></a>
+
+A typical Android app is constructed out of multiple app components, including activities, fragments, services, content providers and broadcast receivers. Android app needs to be much more flexible as the user weaves their way through the different apps on their device, constantly switching flows and tasks. This app-hopping behavior is common, so your app must handle these flows correctly.
+
+Keep in mind that mobile devices are resource constrained, so at any time, the operating system may need to kill some apps to make room for new ones. The point of all this is that your app components can be launched individually and out-of-order, and can be destroyed at anytime by the user or the system. Because app components are ephemeral and their lifecycle (when they are created and destroyed) are not under your control, you should not store any app data or state in your app components and your app components should not depend on each other.
+
+Room
+In new approach, lets tackle the database using Room which a new SQLite object mapping library. To setup a table in room you can define a Plain Old Java Object with annotation @Entity and @PrimaryKey.
+
+```html
+@Entity(tableName = “comments”, foreignKeys = {@ForeignKey(entity = ProductEntity.class, parentColumns = “id”, childColumns = “productId”,onDelete = ForeignKey.CASCADE)}, indices = {@Index(value = “productId”)})
+public class CommentEntity implements Comment{ @PrimaryKey(autoGenerate = true)
+   private int id;
+   private int productId;
+   private String text;
+   private Date postedAt;
+}
+```
+
+For each POJO you need to define a Database Access Object (DAO). The annotated method represent the SQLite commands to interact with POJO data.
+
+```html
+@Dao
+public interface CommentDao {
+   @Query(“SELECT * FROM comments where productId = :productId”)
+   List loadComments(int productId);
+
+   @Insert(onConflict = OnConflictStrategy.REPLACE)
+   void insertAll(List products);
+}
+```
+
+In above example Room automatically converts POJO object into corresponding database tables and back again.
 
 ## LiveData
 LiveData is a data holder class that keeps a value and allows this value to be observed. Unlike a regular observable, LiveData respects the lifecycle of app components, such that the Observer can specify a Lifecycle in which it should observe.
