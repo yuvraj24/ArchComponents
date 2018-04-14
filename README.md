@@ -1,6 +1,6 @@
 # Android Architecture Components
 
-<img src='https://erikcaffrey.github.io/content/images/2017/5/kotlin-arch.png'/>
+![Alt text](https://github.com/yuvraj24/ArchComponents/blob/master/image/kotlin-arch.png)
 
 Check out the Demo app from the Play Store link below.
 
