@@ -1,6 +1,6 @@
 
 
-![Alt text](https://github.com/yuvraj24/ArchComponents/blob/master/image/kotlin-arch.png)
+![Alt text](https://github.com/yuvraj24/ArchComponents/blob/master/image/kotlin-arch_android.png)
 
 Check out the Demo app from the Play Store link below.
 
